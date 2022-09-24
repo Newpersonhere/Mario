@@ -174,7 +174,7 @@ void Player::attemptWarp( Direction direction )
 		// Disable ducking if we are big. This can happen on the same frame as the warp.
 		if( isDucking() )
 		{
-			ducking = false;
+			ducking = true;
 			if( state != SMALL )
 			{
 				setHeight(SUPER_HEIGHT);
@@ -2078,7 +2078,7 @@ void Player::updateCamera()
 	if( !isFlying() )
 	{
 		camera.setYTarget(getBottom());
-		cameraLocked = true;
+		cameraLocked = false;
 	}
 	else if( (isFlying() && isPMeterFilled()) || isUnderwater() || isClimbing() || !cameraLocked )
 	{
