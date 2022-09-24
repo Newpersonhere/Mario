@@ -2078,7 +2078,7 @@ void Player::updateCamera()
 	if( !isFlying() )
 	{
 		camera.setYTarget(getBottom());
-		cameraLocked = true;
+		cameraLocked = false;
 	}
 	else if( (isFlying() && isPMeterFilled()) || isUnderwater() || isClimbing() || !cameraLocked )
 	{
